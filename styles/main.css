@@ -143,7 +143,7 @@ img {
   content: "";
   width: 1000px;
   height: 967px;
-  background: url(../img/drop1.svg) center center no-repeat;
+  background: url("../img/drop1.svg") center center no-repeat;
   background-size: contain;
   display: block;
 
@@ -186,8 +186,8 @@ img {
   background-image: url("../img/arrow.svg");
 }
 
-.button__icon--read-more::after {
-  background-image: url(../img/arrow-to-the-right.svg);
+.button--icon-read-more::after {
+  background-image: url("../img/arrow-to-the-right.svg");
 }
 
 .button--primary {
@@ -654,6 +654,7 @@ img {
   height: 240px;
   width: 350px;
   object-fit: contain;
+  border-radius: 20px 20px 0 0;
 }
 
 .card__title--articles {
