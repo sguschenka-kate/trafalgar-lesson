@@ -127,8 +127,27 @@ img {
   display: block;
 
   position: absolute;
-  bottom: 0;
-  left: 0;
+}
+
+.blue-dots-image::after {
+  content: "";
+  width: 131px;
+  height: 115px;
+  background: url("../img/blue-dots.svg") center center no-repeat;
+  display: block;
+
+  position: absolute;
+}
+
+.drop-image::before {
+  content: "";
+  width: 1000px;
+  height: 967px;
+  background: url(../img/drop1.svg) center center no-repeat;
+  background-size: contain;
+  display: block;
+
+  position: absolute;
 }
 
 .button {
@@ -146,8 +165,8 @@ img {
 
 .button--with-icon {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 17px 35px 19px 40px;
 }
 
@@ -167,6 +186,10 @@ img {
   background-image: url("../img/arrow.svg");
 }
 
+.button__icon--read-more::after {
+  background-image: url(../img/arrow-to-the-right.svg);
+}
+
 .button--primary {
   background: #458ff6;
   color: #fff;
@@ -176,6 +199,17 @@ img {
   background: #fff;
   border: 1px solid #458ff6;
   color: #458ff6;
+}
+
+.button--text {
+  color: #4089ed;
+  background: transparent;
+  padding: 0;
+
+  font-size: 17px;
+  line-height: 1.64;
+  font-weight: 600;
+  min-width: 125px;
 }
 
 .title {
@@ -256,7 +290,7 @@ img {
   margin: 0;
   list-style: none;
 }
-
+/* Если ты нав-айтем и ты не последний, тебе маржин-райт */
 .nav__item:not(:last-child) {
   margin-right: 40px;
 }
@@ -267,6 +301,12 @@ img {
   color: rgba(31, 21, 52, 0.5);
   text-decoration: none;
 }
+
+.nav__link--active {
+  color: #1f1534;
+}
+
+/* line-height/font-size (23/18 = 1.27) */
 
 .nav__link--active {
   color: #1f1534;
@@ -283,9 +323,9 @@ img {
   position: relative;
 }
 
-.hero::before {
-  background: url("../img/blue-dots.svg") left center no-repeat;
+.hero::after {
   top: 0;
+  left: -47px;
 }
 
 .hero__description {
@@ -297,15 +337,15 @@ img {
   margin-top: 25px;
 }
 
-.hero__btn {
+.hero__button {
   margin-top: 45px;
 }
 
 .hero__column--content {
-  justify-content: center;
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
   padding-right: 110px;
 }
@@ -319,12 +359,24 @@ img {
 
 /**
 
+  ./Hero
+
+*/
+
+/**
+
   Services
 
 */
 
 .services {
   margin-top: 192px;
+  position: relative;
+}
+
+.services::before {
+  top: -26px;
+  left: -288px;
 }
 
 .services__top {
@@ -344,7 +396,26 @@ img {
 }
 
 .services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 37px 17px;
+
+  margin-top: 80px;
+}
+
+.services__item {
+  z-index: 1;
+}
+
+.services__item--dots {
+  position: relative;
+}
+
+.services__item--dots::after {
+  right: -54px;
+  bottom: -50px;
+  z-index: -1;
 }
 
 .services__button {
@@ -370,57 +441,23 @@ img {
   align-items: center;
 }
 
-.slider__btn {
-  width: 50px;
-  height: 50px;
-
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-
-  display: flex;
-}
-
-.slider__btn svg {
-  fill: #458ff6;
-  margin: auto;
-}
-
-.slider__btn--disabled svg {
-  fill: rgba(69, 143, 246, 0.4);
-}
-
-.slider__nav-list {
-  margin: 0 90px;
-
-  display: flex;
-  gap: 0 18px;
-}
-
-.slider__nav-pointer-btn {
-  width: 10px;
-  height: 10px;
-
-  background: rgba(69, 143, 246, 0.4);
-  border-radius: 50%;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-
-  transition: background-color 0.2s linear;
-}
-
-.slider__nav-pointer-btn--active,
-.slider__nav-pointer-btn:hover {
-  background: #458ff6;
-}
-
 .slider__view {
   width: 100%;
   height: 425px;
   background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
   border-radius: 24px;
+  position: relative;
+}
+
+.slider__view::after {
+  bottom: 38px;
+  left: -52px;
+  z-index: -1;
+}
+
+.slider__view::before {
+  top: 0;
+  right: -30px;
 }
 
 .slider__list {
@@ -444,8 +481,8 @@ img {
 
 .slider__content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   margin-top: 70px;
 }
 
@@ -488,6 +525,56 @@ img {
   line-height: 1.57;
 }
 
+.slider__btn {
+  width: 50px;
+  height: 50px;
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  display: flex;
+}
+
+.slider__btn svg {
+  fill: #458ff6;
+  margin: auto;
+}
+
+.slider__btn--disabled svg {
+  fill: rgba(69, 143, 246, 0.4);
+}
+
+.slider__nav-list {
+  margin: 0 90px;
+  gap: 0 18px;
+  display: flex;
+}
+
+.slider__nav-pointer-btn {
+  width: 10px;
+  height: 10px;
+  background: rgba(69, 143, 246, 0.4);
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 0.2s linear;
+}
+
+.slider__nav-pointer-btn--active,
+.slider__nav-pointer-btn:hover {
+  background: #458ff6;
+}
+
+/**
+
+  ./Slider
+
+*/
+
 /**
 
   Card
@@ -496,11 +583,53 @@ img {
 
 .card {
   background: #fff;
-  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4); /*смещение х - смещение y - размытие тени - цвет*/
   border-radius: 20px;
 
   padding: 54px 37px;
   max-width: 350px;
+}
+
+.card--services {
+  min-height: 361px;
+}
+
+.card--articles {
+  padding: 0;
+  min-height: 512px;
+}
+
+.card__icon {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.card__icon--search {
+  background-image: url(../img/search.svg);
+}
+
+.card__icon--pharmacy {
+  background-image: url(../img/farmacy.svg);
+}
+
+.card__icon--consultation {
+  background-image: url(../img/consultation.svg);
+}
+
+.card__icon--details {
+  background-image: url(../img/details.svg);
+}
+
+.card__icon--emergency {
+  background-image: url(../img/emergency.svg);
+}
+
+.card__icon--tracking {
+  background-image: url(../img/tracking.svg);
 }
 
 .card__title {
@@ -508,7 +637,9 @@ img {
   font-size: 24px;
   line-height: 2.33;
   font-weight: 700;
+}
 
+.card__title--services {
   margin-top: 22px;
 }
 
@@ -519,23 +650,89 @@ img {
   font-weight: 300;
 }
 
-.card__icon {
-  display: inline-block;
-  width: 90px;
-  height: 90px;
-
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
+.card__image {
+  height: 240px;
+  width: 350px;
+  object-fit: contain;
 }
 
-.card__icon--search {
-  background-image: url("../img/search.svg");
+.card__title--articles {
+  font-size: 21px;
+  line-height: 1.52;
+  margin-top: 24px;
+  max-width: 260px;
+
+  margin-left: 33px;
 }
 
-.card__icon--pharmacy {
-  background-image: url("../img/pharmacy.svg");
+.card__description--articles {
+  max-width: 266px;
+  margin-left: 33px;
+  margin-top: 12px;
 }
+
+/**
+
+  ./Card
+
+*/
+
+/** 
+
+Articles
+
+*/
+
+.articles {
+  margin-top: 216px;
+  position: relative;
+}
+
+.articles::before {
+  transform: rotate(180deg);
+  width: 800px;
+  height: 680px;
+
+  right: -340px;
+  top: 30px;
+}
+
+.articles__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.articles__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 37px 34px;
+
+  position: relative;
+  margin-top: 79px;
+}
+
+.articles__list::after {
+  top: -44px;
+  left: -50px;
+  z-index: -1;
+}
+
+.articles__card-btn {
+  margin-top: 25px;
+  margin-left: 33px;
+}
+
+.articles__btn {
+  margin-top: 69px;
+}
+
+/**
+
+  ./Articles
+
+*/
 
 /**
 
@@ -544,9 +741,22 @@ img {
 */
 
 .footer {
+  width: 100%;
   position: relative;
   padding: 118px 0 113px 0;
+  margin-top: 201px;
   background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+}
+
+.footer::before {
+  bottom: 0;
+  left: 0;
+}
+
+.footer::after {
+  right: 91px;
+  top: -72px;
+  z-index: -1;
 }
 
 .footer__container {
@@ -570,6 +780,7 @@ img {
 .footer-content {
   font-size: 18px;
   font-weight: 300;
+  line-height: 28px;
   color: #fffa;
 }
 
@@ -581,11 +792,10 @@ img {
   margin-top: auto;
 }
 
-.footer__column-title {
+.footer__column--title {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-
   margin-top: 10px;
 }
 
@@ -593,7 +803,7 @@ img {
   margin-top: 35px;
 }
 
-.footer__list-item:not(:first-child) {
+.footer__list--item:not(:first-child) {
   margin-top: 20px;
 }
 
@@ -604,3 +814,9 @@ img {
 .footer__link:hover {
   color: #fff;
 }
+
+/**
+
+  ./Footer
+
+*/
