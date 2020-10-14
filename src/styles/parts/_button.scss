@@ -1,0 +1,46 @@
+.button {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+
+  border-radius: 55px;
+  background: none;
+  cursor: pointer;
+  padding: 17px 40px 19px;
+  min-width: 200px;
+  border: 1px solid transparent;
+}
+
+.button--with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 35px 19px 40px;
+}
+
+.button--with-icon::after {
+  content: "";
+
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 14px;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.button--icon-download::after {
+  background-image: url("../img/arrow.svg");
+}
+
+.button--primary {
+  background: #458ff6;
+  color: #fff;
+}
+
+.button--secondary {
+  background: #fff;
+  border: 1px solid #458ff6;
+  color: #458ff6;
+}

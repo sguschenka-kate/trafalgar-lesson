@@ -1,0 +1,17 @@
+.logo {
+  display: inline-block;
+}
+
+.logo__img {
+  display: block;
+  width: 160px;
+  height: 41px;
+}
+
+.logo__img--dark {
+  background: url("../img/logo-dark.svg") center center no-repeat;
+}
+
+.logo__img--white {
+  background: url("../img/logo-white.svg") center center no-repeat;
+}

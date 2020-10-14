@@ -1,0 +1,42 @@
+.card {
+  background: #fff;
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  border-radius: 20px;
+
+  padding: 54px 37px;
+  max-width: 350px;
+}
+
+.card__title {
+  color: #000;
+  font-size: 24px;
+  line-height: 2.33;
+  font-weight: 700;
+
+  margin-top: 22px;
+}
+
+.card__description {
+  color: #7d7987;
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.card__icon {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.card__icon--search {
+  background-image: url("../img/search.svg");
+}
+
+.card__icon--pharmacy {
+  background-image: url("../img/pharmacy.svg");
+}
