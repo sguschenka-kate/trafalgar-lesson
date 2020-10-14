@@ -1,0 +1,23 @@
+{
+  "name": "trafalgar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sguschenka-kate/trafalgar-lesson.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sguschenka-kate/trafalgar-lesson/issues"
+  },
+  "homepage": "https://github.com/sguschenka-kate/trafalgar-lesson#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
