@@ -2,19 +2,39 @@
   position: relative;
   padding: 118px 0 113px 0;
   background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+
+  @include large {
+    padding: 50px 0;
+  }
+
+  @media screen and (max-width: 481px) {
+    padding-top: 0;
+  }
 }
 
 .footer__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer__column--small {
   width: 150px;
+
+  @media screen and (max-width: 481px) {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 
 .footer__column--large {
   width: 390px;
+
+  @include large {
+    width: 100%;
+    order: 3;
+    margin-top: 50px;
+  }
 }
 
 .footer__column--flex-column {

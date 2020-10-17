@@ -1,5 +1,11 @@
+$gap-x: 17px;
+
 .services {
   margin-top: 192px;
+
+  @include medium {
+    margin-top: 50px;
+  }
 }
 
 .services__top {
@@ -19,7 +25,19 @@
 }
 
 .services__list {
-  gap: 37px 17px;
+  gap: 37px $gap-x;
+}
+
+.services__item {
+  @include extra {
+    width: calc(50% - #{$gap-x});
+    display: flex;
+    justify-content: center;
+  }
+
+  @include small {
+    width: 100%;
+  }
 }
 
 .services__button {

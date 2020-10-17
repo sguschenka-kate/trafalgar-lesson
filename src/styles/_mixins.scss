@@ -1,0 +1,37 @@
+$small-size: 641px;
+$medium-size: 768px;
+$large-size: 901px;
+$extra-size: 1114px;
+
+@mixin small {
+  @media screen and (max-width: $small-size) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: $medium-size) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (max-width: $large-size) {
+    @content;
+  }
+}
+
+@mixin extra {
+  @media screen and (max-width: $extra-size) {
+    @content;
+  }
+}
+
+@mixin visually-hidden {
+  appearance: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}

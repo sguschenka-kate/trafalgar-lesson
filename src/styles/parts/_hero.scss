@@ -1,6 +1,10 @@
 .hero {
   margin-top: 84px;
   position: relative;
+
+  @include medium {
+    margin-top: 30px;
+  }
 }
 
 .hero::before {
@@ -28,6 +32,10 @@
   flex-direction: column;
 
   padding-right: 110px;
+
+  @include medium {
+    padding-right: 0;
+  }
 }
 
 .hero__title {
@@ -35,4 +43,10 @@
   font-weight: 700;
   color: #000;
   line-height: 1.16;
+}
+
+.hero__column--illustration {
+  @include medium {
+    display: none;
+  }
 }

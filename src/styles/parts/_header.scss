@@ -3,4 +3,8 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 56px;
+
+  @include medium {
+    padding-top: 30px;
+  }
 }

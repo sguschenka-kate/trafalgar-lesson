@@ -1,8 +1,9 @@
+@import "./mixins";
 @import "../../node_modules/modern-css-reset/dist/reset.min.css";
 
-@import "./parts/global";
-@import "./parts/grid";
 @import "./parts/button";
+@import "./parts/grid";
+@import "./parts/global";
 
 @import "./parts/card";
 
