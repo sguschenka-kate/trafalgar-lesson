@@ -1,18 +1,17 @@
 @import "./mixins";
 @import "../../node_modules/modern-css-reset/dist/reset.min.css";
 
-@import "./blocks/global";
-@import "./blocks//grid";
-@import "./blocks/button";
+@import "./parts/button";
+@import "./parts/grid";
+@import "./parts/global";
 
-@import "./blocks/card";
+@import "./parts/card";
 
-@import "./blocks/header";
-@import "./blocks/footer";
-@import "./blocks/logo";
-@import "./blocks/nav";
+@import "./parts/header";
+@import "./parts/footer";
+@import "./parts/logo";
+@import "./parts/nav";
 
-@import "./blocks/hero";
-@import "./blocks/sevices";
-@import "./blocks/slider";
-@import "./blocks/articles";
+@import "./parts/hero";
+@import "./parts/services";
+@import "./parts/slider";
