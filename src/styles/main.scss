@@ -1,0 +1,18 @@
+@import "./mixins";
+@import "../../node_modules/modern-css-reset/dist/reset.min.css";
+
+@import "./blocks/global";
+@import "./blocks//grid";
+@import "./blocks/button";
+
+@import "./blocks/card";
+
+@import "./blocks/header";
+@import "./blocks/footer";
+@import "./blocks/logo";
+@import "./blocks/nav";
+
+@import "./blocks/hero";
+@import "./blocks/sevices";
+@import "./blocks/slider";
+@import "./blocks/articles";

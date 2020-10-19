@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/sguschenka-kate/trafalgar-lesson#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "modern-css-reset": "^1.1.1",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.27.0"
   }
 }

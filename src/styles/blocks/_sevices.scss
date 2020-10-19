@@ -1,0 +1,59 @@
+/**
+
+  Services
+
+*/
+
+.services {
+  margin-top: 192px;
+  position: relative;
+}
+
+.services::before {
+  top: -26px;
+  left: -288px;
+}
+
+.services__top {
+  max-width: 950px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.services__description {
+  color: #7d7987;
+  font-size: 18px;
+  line-height: 1.66;
+  font-weight: 300;
+
+  margin-top: 33px;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 37px 17px;
+
+  margin-top: 80px;
+}
+
+.services__item {
+  z-index: 1;
+}
+
+.services__item--dots {
+  position: relative;
+}
+
+.services__item--dots::after {
+  right: -54px;
+  bottom: -50px;
+  z-index: -1;
+}
+
+.services__button {
+  margin-top: 69px;
+  text-align: center;
+}

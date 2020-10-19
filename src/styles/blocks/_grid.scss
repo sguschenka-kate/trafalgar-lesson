@@ -1,0 +1,28 @@
+/**
+
+  Grid system
+
+*/
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1151px) {
+    padding: 0 15px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex-grow: 1;
+}
+
+.col-50 {
+  width: 50%;
+  max-width: 50%;
+}
