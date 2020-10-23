@@ -1,11 +1,9 @@
-/**
-
-  Slider
-
-*/
-
 .slider {
   margin-top: 251px;
+
+  @include medium {
+    margin-top: 50px;
+  }
 }
 
 .slider__nav {
@@ -22,6 +20,10 @@
   background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
   border-radius: 24px;
   position: relative;
+
+  @include large {
+    height: auto;
+  }
 }
 
 .slider__view::after {
@@ -42,12 +44,25 @@
 .slider__item {
   width: 100%;
   padding: 54px 118px;
+
+  @include extra {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include small {
+    padding: 30px 20px;
+  }
 }
 
 .slider__title {
   color: #fff;
   display: block;
   text-align: center;
+
+  @media screen and (max-width: 434px) {
+    font-size: 23px;
+  }
 }
 
 .slider__title::before {
@@ -59,12 +74,26 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 70px;
+
+  @include large {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  @media screen and (max-width: 434px) {
+    align-items: flex-start;
+  }
 }
 
 .slider__image-container {
   display: flex;
   align-items: center;
   margin: 0;
+
+  @media screen and (max-width: 434px) {
+    order: 2;
+    margin-top: 10px;
+  }
 }
 
 .slider__image {
@@ -73,10 +102,18 @@
   height: 141px;
   object-fit: contain;
   object-position: center;
+
+  @media screen and (max-width: 434px) {
+    display: none;
+  }
 }
 
 .slider__image-description {
   margin-left: 33px;
+
+  @media screen and (max-width: 434px) {
+    margin-left: 0;
+  }
 }
 
 .slider__content-name {
@@ -98,6 +135,15 @@
   color: rgba(255, 255, 255, 0.9);
   font-size: 19px;
   line-height: 1.57;
+
+  @include large {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  @media screen and (max-width: 434px) {
+    margin-top: 0;
+  }
 }
 
 .slider__btn {
@@ -143,9 +189,3 @@
 .slider__nav-pointer-btn:hover {
   background: #458ff6;
 }
-
-/**
-
-  ./Slider
-
-*/

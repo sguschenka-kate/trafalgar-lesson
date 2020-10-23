@@ -1,12 +1,10 @@
-/**
-
-  Hero
-
-*/
-
 .hero {
   margin-top: 84px;
   position: relative;
+
+  @include medium {
+    margin-top: 30px;
+  }
 }
 
 .hero::after {
@@ -23,7 +21,7 @@
   margin-top: 25px;
 }
 
-.hero__button {
+.hero__btn {
   margin-top: 45px;
 }
 
@@ -47,8 +45,8 @@
   line-height: 1.16;
 }
 
-/**
-
-  ./Hero
-
-*/
+.hero__column--illustration {
+  @include medium {
+    display: none;
+  }
+}

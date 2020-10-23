@@ -1,12 +1,12 @@
-/**
-
-  Services
-
-*/
+$gap-x: 17px;
 
 .services {
   margin-top: 192px;
   position: relative;
+
+  @include medium {
+    margin-top: 50px;
+  }
 }
 
 .services::before {
@@ -34,13 +34,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 37px 17px;
+  gap: 37px $gap-x;
 
   margin-top: 80px;
 }
 
 .services__item {
   z-index: 1;
+
+  @include extra {
+    width: calc(50% - #{$gap-x});
+    display: flex;
+    justify-content: center;
+  }
+
+  @include small {
+    width: 100%;
+  }
 }
 
 .services__item--dots {

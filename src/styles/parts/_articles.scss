@@ -5,6 +5,10 @@ $gap: 34px;
   position: relative;
 
   overflow: hidden;
+
+  @include large {
+    margin-top: 50px;
+  }
 }
 
 .articles::before {

@@ -26,3 +26,10 @@
   width: 50%;
   max-width: 50%;
 }
+
+.col-m-100 {
+  @include medium {
+    width: 100%;
+    max-width: 100%;
+  }
+}
