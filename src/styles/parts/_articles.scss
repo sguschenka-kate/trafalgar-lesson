@@ -1,8 +1,4 @@
-/** 
-
-Articles
-
-*/
+$gap: 34px;
 
 .articles {
   margin-top: 216px;
@@ -30,10 +26,17 @@ Articles
 .articles__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 37px 34px;
 
   position: relative;
   margin-top: 79px;
+}
+
+.articles__item {
+  @media screen and (max-width: 1155px) {
+    width: (50% - #{$gap});
+  }
 }
 
 .articles__list::after {
@@ -50,9 +53,3 @@ Articles
 .articles__btn {
   margin-top: 69px;
 }
-
-/**
-
-  ./Articles
-
-*/
