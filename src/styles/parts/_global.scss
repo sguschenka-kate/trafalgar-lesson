@@ -4,11 +4,18 @@
   box-sizing: border-box;
 }
 
+/**
+
+  Common styles
+
+*/
+
 body {
   font-family: "Mulish", sans-serif;
   width: 100%;
   height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
 
   display: flex;
   flex-direction: column;
@@ -30,11 +37,6 @@ ul {
   list-style: none;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
 .maincontent {
   flex-grow: 1;
 }
@@ -47,61 +49,67 @@ img {
   display: block;
 
   position: absolute;
-  bottom: 0;
-  left: 0;
+}
+
+.blue-dots-image::after {
+  content: "";
+  width: 131px;
+  height: 115px;
+  background: url("../img/blue-dots.svg") center center no-repeat;
+  display: block;
+
+  position: absolute;
+}
+
+.drop-image::before {
+  content: "";
+  width: 1000px;
+  height: 967px;
+  background: url("../img/drop1.svg") center center no-repeat;
+  background-size: contain;
+  display: block;
+
+  position: absolute;
+}
+
+.div {
+  width: 300px;
+  height: 200px;
+  border: 1px solid;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .content-section,
 .content-section__item:not(:first-child) {
   margin-top: 220px;
-
-  @include medium {
-    margin-top: 50px;
-  }
 }
 
 .content-section__image {
   padding-right: 35px;
-
-  @include medium {
-    display: none;
-  }
 }
 
 .content-section__content-wrapper {
   padding-left: 35px;
-
-  @include medium {
-    padding-left: 0;
-  }
 }
 
 .content-section__item:nth-child(2n) .content-section__image {
   order: 2;
   padding-left: 35px;
   padding-right: 0;
-
-  @include medium {
-    padding-left: 0;
-  }
 }
 
 .content-section__item:nth-child(2n) .content-section__content-wrapper {
   order: 1;
   padding-right: 35px;
   padding-left: 0;
-
-  @include medium {
-    padding-left: 0;
-  }
 }
 
 .content-section__title {
   max-width: 360px;
-
-  @include medium {
-    max-width: 100%;
-  }
 }
 
 .content-section__description {
@@ -112,19 +120,10 @@ img {
   font-size: 18px;
   line-height: 1.66;
   font-weight: 300;
-
-  @include medium {
-    max-width: 100%;
-  }
 }
 
 .content-section__btn {
   margin-top: 37px;
-
-  @include medium {
-    display: block;
-    margin: 37px auto 0;
-  }
 }
 
 .title {

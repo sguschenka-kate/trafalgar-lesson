@@ -1,10 +1,58 @@
+/**
+
+  Card
+
+*/
+
 .card {
   background: #fff;
-  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4); /*смещение х - смещение y - размытие тени - цвет*/
   border-radius: 20px;
 
   padding: 54px 37px;
   max-width: 350px;
+}
+
+.card--services {
+  min-height: 361px;
+}
+
+.card--articles {
+  padding: 0;
+  min-height: 512px;
+}
+
+.card__icon {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.card__icon--search {
+  background-image: url(../img/search.svg);
+}
+
+.card__icon--pharmacy {
+  background-image: url(../img/farmacy.svg);
+}
+
+.card__icon--consultation {
+  background-image: url(../img/consultation.svg);
+}
+
+.card__icon--details {
+  background-image: url(../img/details.svg);
+}
+
+.card__icon--emergency {
+  background-image: url(../img/emergency.svg);
+}
+
+.card__icon--tracking {
+  background-image: url(../img/tracking.svg);
 }
 
 .card__title {
@@ -12,7 +60,9 @@
   font-size: 24px;
   line-height: 2.33;
   font-weight: 700;
+}
 
+.card__title--services {
   margin-top: 22px;
 }
 
@@ -23,20 +73,30 @@
   font-weight: 300;
 }
 
-.card__icon {
-  display: inline-block;
-  width: 90px;
-  height: 90px;
-
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
+.card__image {
+  height: 240px;
+  width: 350px;
+  object-fit: contain;
+  border-radius: 20px 20px 0 0;
 }
 
-.card__icon--search {
-  background-image: url("../img/search.svg");
+.card__title--articles {
+  font-size: 21px;
+  line-height: 1.52;
+  margin-top: 24px;
+  max-width: 260px;
+
+  margin-left: 33px;
 }
 
-.card__icon--pharmacy {
-  background-image: url("../img/pharmacy.svg");
+.card__description--articles {
+  max-width: 266px;
+  margin-left: 33px;
+  margin-top: 12px;
 }
+
+/**
+
+  ./Card
+
+*/

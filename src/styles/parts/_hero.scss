@@ -1,15 +1,17 @@
+/**
+
+  Hero
+
+*/
+
 .hero {
   margin-top: 84px;
   position: relative;
-
-  @include medium {
-    margin-top: 30px;
-  }
 }
 
-.hero::before {
-  background: url("../img/blue-dots.svg") left center no-repeat;
+.hero::after {
   top: 0;
+  left: -47px;
 }
 
 .hero__description {
@@ -21,15 +23,15 @@
   margin-top: 25px;
 }
 
-.hero__btn {
+.hero__button {
   margin-top: 45px;
 }
 
 .hero__column--content {
-  justify-content: center;
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
   padding-right: 110px;
 
@@ -45,8 +47,8 @@
   line-height: 1.16;
 }
 
-.hero__column--illustration {
-  @include medium {
-    display: none;
-  }
-}
+/**
+
+  ./Hero
+
+*/

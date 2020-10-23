@@ -13,8 +13,8 @@
 
 .button--with-icon {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 17px 35px 19px 40px;
 }
 
@@ -34,6 +34,10 @@
   background-image: url("../img/arrow.svg");
 }
 
+.button--icon-read-more::after {
+  background-image: url("../img/arrow-to-the-right.svg");
+}
+
 .button--primary {
   background: #458ff6;
   color: #fff;
@@ -43,4 +47,15 @@
   background: #fff;
   border: 1px solid #458ff6;
   color: #458ff6;
+}
+
+.button--text {
+  color: #4089ed;
+  background: transparent;
+  padding: 0;
+
+  font-size: 17px;
+  line-height: 1.64;
+  font-weight: 600;
+  min-width: 125px;
 }

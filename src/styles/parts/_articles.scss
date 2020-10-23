@@ -1,0 +1,55 @@
+$gap: 34px;
+
+.articles {
+  margin-top: 216px;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.articles::before {
+  transform: rotate(180deg);
+  width: 770px;
+  height: 557px;
+
+  right: -340px;
+  top: 30px;
+}
+
+.articles__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.articles__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 37px 34px;
+
+  position: relative;
+  margin-top: 79px;
+}
+
+.articles__item {
+  @media screen and (max-width: 1155px) {
+    width: (50% - #{$gap});
+  }
+}
+
+.articles__list::after {
+  top: -44px;
+  left: -50px;
+  z-index: -1;
+}
+
+.articles__card-btn {
+  margin-top: 25px;
+  margin-left: 33px;
+}
+
+.articles__btn {
+  margin-top: 69px;
+}

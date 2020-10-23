@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "trafalgar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ilajosmanov/trafalgar-lesson.git"
+    "url": "git+https://github.com/sguschenka-kate/trafalgar-lesson.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ilajosmanov/trafalgar-lesson/issues"
+    "url": "https://github.com/sguschenka-kate/trafalgar-lesson/issues"
   },
-  "homepage": "https://github.com/ilajosmanov/trafalgar-lesson#readme",
+  "homepage": "https://github.com/sguschenka-kate/trafalgar-lesson#readme",
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "flex-gap-polyfill": "^1.0.3",
